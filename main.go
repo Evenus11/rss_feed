@@ -31,7 +31,7 @@ func main() {
 			os.Exit(1)
 		}
 	case "new":
-		err = newFeed(args[0])
+		err = rss.NewFeed(args[0])
 		if err != nil {
 			fmt.Fprintf(os.Stderr, "Error creating new feed: %v\n", err)
 			os.Exit(1)
