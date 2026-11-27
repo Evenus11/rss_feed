@@ -43,6 +43,9 @@ func Fetch(Client *http.Client, url string) (Feed, error) {
 func NewFeed(url string) error {
 	// Placeholder for creating a new feed
 	// In a real application, you might want to store the feed URL in a database or a file
+	if url == "" {
+		return fmt.Errorf("feed URL cannot be empty")
+	}
 	fmt.Printf("New feed created: %s\n", url)
 	return nil
 }
